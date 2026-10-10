@@ -152,3 +152,35 @@ export interface ServiceResult<T> {
   data: T
   source: 'mock' | 'live'
 }
+
+/* ------------------------- Backend API contracts ------------------------ */
+/* These mirror .clinerules/02-api-contracts.md (FastAPI backend :8000).   */
+
+export interface SeedVariety {
+  name: string
+  maturityDays: number
+  /** Yield in quintals per hectare. */
+  yield: number
+  resistance: string[]
+}
+
+export interface PesticideCheckResult {
+  status: 'approved' | 'banned' | 'restricted'
+  reason: string
+}
+
+export interface ClimateTrends {
+  rainfallTrend: { year: number; rainfall: number }[]
+  tempTrend: { year: number; tempMax: number; tempMin: number }[]
+}
+
+export interface IrrigationAdvice {
+  nextIrrigation: string
+  reason: string
+  waterNeeded: string
+}
+
+export interface HarvestAdvice {
+  optimalWindow: { start: string; end: string }
+  reason: string
+}

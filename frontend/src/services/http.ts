@@ -22,3 +22,27 @@ export async function httpGet<T>(path: string, signal?: AbortSignal): Promise<T>
 
   return (await res.json()) as T
 }
+
+/**
+ * Typed POST helper for the service layer in "live" mode.
+ * Same contract as httpGet: failures propagate, never fall back to mocks.
+ */
+export async function httpPost<T>(
+  path: string,
+  body: unknown,
+  signal?: AbortSignal,
+): Promise<T> {
+  const url = `${API_BASE_URL}${path}`
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+    signal,
+  })
+
+  if (!res.ok) {
+    throw new Error(`Request to ${path} failed with status ${res.status}`)
+  }
+
+  return (await res.json()) as T
+}

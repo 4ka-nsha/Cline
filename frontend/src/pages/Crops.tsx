@@ -1,11 +1,20 @@
+import { useState } from 'react'
 import { getCropRecommendations } from '../services'
 import { useAsync } from '../utils/useAsync'
 import PageHeader from '../components/PageHeader'
 import DataModeBadge from '../components/DataModeBadge'
 import { ErrorState, LoadingState } from '../components/StateViews'
 
+const CROPS = ['rice', 'wheat', 'cotton', 'tomato']
+
 export default function Crops() {
-  const { data, loading, error } = useAsync((s) => getCropRecommendations(s), [])
+  // Live backend is GET /api/seeds?crop={crop}&state={state}.
+  const [crop, setCrop] = useState('rice')
+  const [state, setState] = useState('Tamil Nadu')
+  const { data, loading, error } = useAsync(
+    (s) => getCropRecommendations(crop, state || undefined, s),
+    [crop, state],
+  )
 
   return (
     <div>
@@ -15,6 +24,32 @@ export default function Crops() {
       >
         <DataModeBadge />
       </PageHeader>
+
+      <div className="mb-4 flex flex-wrap items-end gap-3">
+        <label className="text-sm text-gray-600">
+          Crop
+          <select
+            value={crop}
+            onChange={(e) => setCrop(e.target.value)}
+            className="ml-2 rounded-lg border border-gray-300 bg-white px-2 py-1 text-sm"
+          >
+            {CROPS.map((c) => (
+              <option key={c} value={c} className="capitalize">
+                {c}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="text-sm text-gray-600">
+          State (optional)
+          <input
+            value={state}
+            onChange={(e) => setState(e.target.value)}
+            placeholder="e.g. Tamil Nadu"
+            className="ml-2 rounded-lg border border-gray-300 bg-white px-2 py-1 text-sm"
+          />
+        </label>
+      </div>
 
       {loading && <LoadingState label="Loading recommendations…" />}
       {error && <ErrorState message={error} />}
