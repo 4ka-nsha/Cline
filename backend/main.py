@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routes.climate import router as climate_router
 from routes.pesticide import router as pesticide_router
+from routes.seeds import router as seeds_router
 from routes.weather import router as weather_router
 
 app = FastAPI(title="Farm Assistant API", version="0.1.0")
@@ -32,6 +33,7 @@ def health() -> dict:
 app.include_router(weather_router, prefix="/api/weather", tags=["weather"])
 app.include_router(climate_router, prefix="/api/climate", tags=["climate"])
 app.include_router(pesticide_router, prefix="/api/pesticide", tags=["pesticide"])
+app.include_router(seeds_router, prefix="/api/seeds", tags=["seeds"])
 
 
 if __name__ == "__main__":

@@ -1,0 +1,131 @@
+{
+  "_note": "Hardcoded ICAR-recommended variety data for the seed recommendation module. Used by services/seed_service.py. yieldQuintalsPerHectare is mapped to 'yield' in the API response (see 02-api-contracts.md). Cotton yield is seed-cotton quintals/ha.",
+  "varieties": [
+    {
+      "name": "ADT 43",
+      "crop": "rice",
+      "maturityDays": 112,
+      "yieldQuintalsPerHectare": 48,
+      "resistance": ["bacterial leaf blight", "lodging"],
+      "suitableStates": ["Tamil Nadu", "Andhra Pradesh", "Kerala", "Puducherry"],
+      "season": "kharif"
+    },
+    {
+      "name": "CO 51",
+      "crop": "rice",
+      "maturityDays": 108,
+      "yieldQuintalsPerHectare": 50,
+      "resistance": ["bacterial leaf blight", "lodging"],
+      "suitableStates": ["Tamil Nadu", "Kerala"],
+      "season": "kharif"
+    },
+    {
+      "name": "ASD 16",
+      "crop": "rice",
+      "maturityDays": 110,
+      "yieldQuintalsPerHectare": 45,
+      "resistance": ["bacterial leaf blight", "blast"],
+      "suitableStates": ["Tamil Nadu", "Puducherry"],
+      "season": "kharif"
+    },
+    {
+      "name": "IR 64",
+      "crop": "rice",
+      "maturityDays": 125,
+      "yieldQuintalsPerHectare": 55,
+      "resistance": ["blast", "bacterial leaf blight", "brown plant hopper"],
+      "suitableStates": ["Andhra Pradesh", "Telangana", "West Bengal", "Odisha", "Uttar Pradesh", "Karnataka"],
+      "season": "kharif"
+    },
+    {
+      "name": "HD 3086",
+      "crop": "wheat",
+      "maturityDays": 112,
+      "yieldQuintalsPerHectare": 48,
+      "resistance": ["yellow rust", "leaf rust", "lodging"],
+      "suitableStates": ["Uttar Pradesh", "Punjab", "Haryana", "Madhya Pradesh"],
+      "season": "rabi"
+    },
+    {
+      "name": "PBW 343",
+      "crop": "wheat",
+      "maturityDays": 118,
+      "yieldQuintalsPerHectare": 45,
+      "resistance": ["yellow rust", "leaf rust", "karnal bunt"],
+      "suitableStates": ["Punjab", "Haryana", "Uttar Pradesh", "Jammu & Kashmir"],
+      "season": "rabi"
+    },
+    {
+      "name": "GW 322",
+      "crop": "wheat",
+      "maturityDays": 112,
+      "yieldQuintalsPerHectare": 46,
+      "resistance": ["yellow rust", "powdery mildew"],
+      "suitableStates": ["Uttar Pradesh", "Madhya Pradesh", "Rajasthan"],
+      "season": "rabi"
+    },
+    {
+      "name": "HI 8627",
+      "crop": "wheat",
+      "maturityDays": 108,
+      "yieldQuintalsPerHectare": 44,
+      "resistance": ["leaf rust", "lodging"],
+      "suitableStates": ["Haryana", "Punjab", "Uttar Pradesh"],
+      "season": "rabi"
+    },
+    {
+      "name": "RCH 2",
+      "crop": "cotton",
+      "maturityDays": 155,
+      "yieldQuintalsPerHectare": 22,
+      "resistance": ["bollworm (Bt)", "fusarium wilt"],
+      "suitableStates": ["Maharashtra", "Gujarat", "Andhra Pradesh", "Punjab"],
+      "season": "kharif"
+    },
+    {
+      "name": "NCS 207",
+      "crop": "cotton",
+      "maturityDays": 160,
+      "yieldQuintalsPerHectare": 21,
+      "resistance": ["bollworm (Bt)", "ram wilt"],
+      "suitableStates": ["Maharashtra", "Gujarat", "Madhya Pradesh"],
+      "season": "kharif"
+    },
+    {
+      "name": "MECH 12",
+      "crop": "cotton",
+      "maturityDays": 165,
+      "yieldQuintalsPerHectare": 23,
+      "resistance": ["bollworm (Bt)"],
+      "suitableStates": ["Maharashtra", "Telangana", "Karnataka", "Andhra Pradesh"],
+      "season": "kharif"
+    },
+    {
+      "name": "Arka Rakshak",
+      "crop": "tomato",
+      "maturityDays": 135,
+      "yieldQuintalsPerHectare": 380,
+      "resistance": ["tomato leaf curl virus", "bacterial wilt"],
+      "suitableStates": ["Tamil Nadu", "Karnataka", "Andhra Pradesh"],
+      "season": "zaid"
+    },
+    {
+      "name": "PKM 1",
+      "crop": "tomato",
+      "maturityDays": 130,
+      "yieldQuintalsPerHectare": 400,
+      "resistance": ["bacterial wilt", "leaf spot"],
+      "suitableStates": ["Tamil Nadu", "Karnataka", "Maharashtra"],
+      "season": "zaid"
+    },
+    {
+      "name": "CO 3",
+      "crop": "tomato",
+      "maturityDays": 125,
+      "yieldQuintalsPerHectare": 350,
+      "resistance": ["leaf spot", "fruit crack"],
+      "suitableStates": ["Tamil Nadu", "Puducherry", "Kerala"],
+      "season": "zaid"
+    }
+  ]
+}
