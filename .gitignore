@@ -1,5 +1,29 @@
 node_modules/
 dist/
+build/
+*.local
+
+# Never commit secrets
 .env
 .env.*
 !.env.example
+
+# Local database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+server/data/
+
+# Logs / OS
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+*.tsbuildinfo

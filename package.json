@@ -1,0 +1,15 @@
+{
+  "name": "krishiflow",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "test": "npm run test --workspace server",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}
