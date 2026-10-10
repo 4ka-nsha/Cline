@@ -7,6 +7,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from routes.climate import router as climate_router
+from routes.harvest import router as harvest_router
+from routes.irrigation import router as irrigation_router
 from routes.pesticide import router as pesticide_router
 from routes.seeds import router as seeds_router
 from routes.weather import router as weather_router
@@ -34,6 +36,8 @@ app.include_router(weather_router, prefix="/api/weather", tags=["weather"])
 app.include_router(climate_router, prefix="/api/climate", tags=["climate"])
 app.include_router(pesticide_router, prefix="/api/pesticide", tags=["pesticide"])
 app.include_router(seeds_router, prefix="/api/seeds", tags=["seeds"])
+app.include_router(irrigation_router, prefix="/api/irrigation", tags=["irrigation"])
+app.include_router(harvest_router, prefix="/api/harvest", tags=["harvest"])
 
 
 if __name__ == "__main__":

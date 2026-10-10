@@ -1,0 +1,46 @@
+{
+  "_note": "Crop water requirement per irrigation event (mm depth to apply) by growth stage. Used by services/irrigation_service.py. Values are typical Field crops reference ET-based estimates for Indian conditions; critical stages are flagged.",
+  "runoffCoefficient": {
+    "rice": 0.75,
+    "default": 0.6
+  },
+  "crops": {
+    "rice": {
+      "stages": {
+        "transplanting": { "waterMm": 60, "critical": false },
+        "tillering": { "waterMm": 60, "critical": false },
+        "panicle initiation": { "waterMm": 85, "critical": true },
+        "flowering": { "waterMm": 90, "critical": true },
+        "maturity": { "waterMm": 20, "critical": false }
+      }
+    },
+    "wheat": {
+      "stages": {
+        "sowing": { "waterMm": 20, "critical": false },
+        "tillering": { "waterMm": 25, "critical": false },
+        "jointing": { "waterMm": 35, "critical": false },
+        "flowering": { "waterMm": 45, "critical": true },
+        "grain filling": { "waterMm": 35, "critical": true },
+        "maturity": { "waterMm": 15, "critical": false }
+      }
+    },
+    "cotton": {
+      "stages": {
+        "sowing": { "waterMm": 20, "critical": false },
+        "squaring": { "waterMm": 30, "critical": false },
+        "flowering": { "waterMm": 40, "critical": true },
+        "boll development": { "waterMm": 40, "critical": true },
+        "maturity": { "waterMm": 20, "critical": false }
+      }
+    },
+    "tomato": {
+      "stages": {
+        "transplanting": { "waterMm": 25, "critical": false },
+        "flowering": { "waterMm": 35, "critical": false },
+        "fruit set": { "waterMm": 40, "critical": true },
+        "fruit development": { "waterMm": 40, "critical": true },
+        "maturity": { "waterMm": 25, "critical": false }
+      }
+    }
+  }
+}

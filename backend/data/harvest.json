@@ -1,0 +1,12 @@
+{
+  "_note": "Crop maturity windows (days from sowing to optimal harvest) used by services/harvest_service.py. Window is [minDays, maxDays] after sowing.",
+  "crops": {
+    "rice": { "minDays": 120, "maxDays": 150 },
+    "wheat": { "minDays": 110, "maxDays": 130 },
+    "cotton": { "minDays": 150, "maxDays": 180 },
+    "tomato": { "minDays": 90, "maxDays": 120 },
+    "maize": { "minDays": 90, "maxDays": 120 },
+    "groundnut": { "minDays": 100, "maxDays": 130 },
+    "sugarcane": { "minDays": 300, "maxDays": 365 }
+  }
+}
