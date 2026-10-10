@@ -1,0 +1,12 @@
+{
+  // Pylance: add the FastAPI venv's site-packages to the static-analysis path
+  // so third-party imports (fastapi, uvicorn, httpx) resolve. The ** glob works
+  // cross-platform (Windows Lib/site-packages, macOS/Linux lib/pythonX.Y/site-packages).
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/backend/.venv/**/site-packages"
+  ],
+  // Used the first time VS Code picks an interpreter for this workspace.
+  // NOTE: If an interpreter was already selected, use Ctrl+Shift+P ->
+  // "Python: Select Interpreter" -> backend\\.venv\\Scripts\\python.exe (sticky per workspace).
+  "python.defaultInterpreterPath": "backend/.venv/Scripts/python.exe"
+}
