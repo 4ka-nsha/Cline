@@ -1,0 +1,122 @@
+{
+  "_note": "Hardcoded sample dataset of pesticides banned/restricted by India's CIBRC (Central Insectibles Board & Registration Committee). Used by services/pesticide_service.py. Not exhaustive -- always verify against the product label and local regulations.",
+  "banned": [
+    {
+      "name": "Endosulfan",
+      "aliases": ["endosulfan", "thiodan", "endosulfan 30 ec"],
+      "reason": "Banned in India (2011-12). It is a persistent organic pollutant under the Stockholm Convention, harmful to human health and aquatic life."
+    },
+    {
+      "name": "Phorate",
+      "aliases": ["phorate", "thimet", "phorate 10 gs"],
+      "reason": "Banned for most crops due to high acute toxicity; responsible for many accidental poisoning cases."
+    },
+    {
+      "name": "Methyl Parathion",
+      "aliases": ["methyl parathion", "parathion methyl", "parathion-methyl"],
+      "reason": "Banned due to high acute toxicity to humans and pollinators."
+    },
+    {
+      "name": "Phosphamidon",
+      "aliases": ["phosphamidon"],
+      "reason": "Banned due to high toxicity and environmental persistence."
+    },
+    {
+      "name": "Aldrin",
+      "aliases": ["aldrin"],
+      "reason": "Organochlorine insecticide banned under the Stockholm Convention on persistent organic pollutants."
+    },
+    {
+      "name": "Dieldrin",
+      "aliases": ["dieldrin"],
+      "reason": "Organochlorine banned under the Stockholm Convention; accumulates in the food chain."
+    },
+    {
+      "name": "DDT",
+      "aliases": ["ddt", "dicophane"],
+      "reason": "Banned for agricultural use in India (only permitted for public-health malaria vector control)."
+    },
+    {
+      "name": "Heptachlor",
+      "aliases": ["heptachlor"],
+      "reason": "Organochlorine banned under the Stockholm Convention; persists in soil and accumulates in food."
+    },
+    {
+      "name": "Chlordane",
+      "aliases": ["chlordane"],
+      "reason": "Organochlorine banned under the Stockholm Convention."
+    },
+    {
+      "name": "Lindane",
+      "aliases": ["lindane", "gamma-hch", "gammalin"],
+      "reason": "Banned for agricultural use; a persistent organic pollutant."
+    },
+    {
+      "name": "Toxaphene",
+      "aliases": ["toxaphene", "camphechlor"],
+      "reason": "Banned under the Stockholm Convention on persistent organic pollutants."
+    },
+    {
+      "name": "Triazophos",
+      "aliases": ["triazophos"],
+      "reason": "Banned for agricultural use due to high toxicity to humans and aquatic organisms."
+    },
+    {
+      "name": "Quinalphos",
+      "aliases": ["quinalphos", "quinalphos 25 ec"],
+      "reason": "Banned/restricted for many crops due to acute toxicity."
+    }
+  ],
+  "restricted": [
+    {
+      "name": "Chlorpyrifos",
+      "aliases": ["chlorpyrifos", "lorsban", "chlorpyrifos 20 ec", "chlorpyrifos 50 ec"],
+      "reason": "Restricted: not permitted on vegetables and several crops; toxic to pollinators and aquatic life. Use only where specifically allowed."
+    },
+    {
+      "name": "Monocrotophos",
+      "aliases": ["monocrotophos", "azodrin", "monocrotophos 36 sl"],
+      "reason": "Restricted: banned on vegetables; highly toxic to birds and humans. Permitted only on specific crops at label dose."
+    },
+    {
+      "name": "Carbofuran",
+      "aliases": ["carbofuran", "furadan", "carbofuran 3 g"],
+      "reason": "Restricted: granular formulation banned due to bird mortality; toxic to users. Use only permitted crops/forms."
+    },
+    {
+      "name": "Dichlorvos",
+      "aliases": ["dichlorvos", "ddvp", "dichlorvos 76 ec"],
+      "reason": "Restricted: high mammalian toxicity; permitted only for specific uses at label dose."
+    },
+    {
+      "name": "Acephate",
+      "aliases": ["acephate", "acephate 70 sp"],
+      "reason": "Restricted on certain crops due to toxicity to pollinators and aquatic organisms."
+    },
+    {
+      "name": "Methomyl",
+      "aliases": ["methomyl", "larvin", "methomyl 24 ls"],
+      "reason": "Restricted: high acute toxicity (a carbamate). Use only where permitted with full protective gear."
+    },
+    {
+      "name": "Paraquat",
+      "aliases": ["paraquat", "paraquat dichloride", "gramoxone"],
+      "reason": "Restricted: highly toxic herbicide with no safe antidote; licensed users only with PPE."
+    },
+    {
+      "name": "Glyphosate",
+      "aliases": ["glyphosate", "roundup", "glyphosate 41 sl"],
+      "reason": "Restricted: use with care near water bodies and food crops; avoid drift. Follow state-specific limits."
+    },
+    {
+      "name": "Cypermethrin",
+      "aliases": ["cypermethrin", "cypermethrin 25 ec", "apache"],
+      "reason": "Restricted: highly toxic to fish and bees; observe pre-harvest interval and avoid aquatic contamination."
+    },
+    {
+      "name": "Carbendazim",
+      "aliases": ["carbendazim", "bavistin", "carbendazim 50 wp"],
+      "reason": "Restricted on several crops due to endocrine-disruption and residue concerns."
+    }
+  ]
+}
