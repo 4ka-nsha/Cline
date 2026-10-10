@@ -1,7 +1,8 @@
 """GET /api/weather route.
 
 Query params: lat (float, -90..90), lon (float, -180..180).
-Response: { forecast: [{ date, tempMax, tempMin, rainfall, description }] }
+Response: { forecast: [{ date, tempMax, tempMin, rainfall, description,
+    humidity, windSpeed }] }
 """
 from fastapi import APIRouter, HTTPException, Query
 

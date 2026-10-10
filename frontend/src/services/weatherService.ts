@@ -11,6 +11,8 @@ interface BackendWeather {
     tempMin: number
     rainfall: number
     description: string
+    humidity: number | null
+    windSpeed: number | null
   }[]
 }
 
@@ -38,9 +40,9 @@ export async function getWeather(
       current: {
         tempC: b.forecast[0]?.tempMax ?? 0,
         condition: b.forecast[0]?.description ?? '',
-        // Backend does not provide these; UI must tolerate 0/unknown.
-        humidity: 0,
-        windKph: 0,
+        humidity: b.forecast[0]?.humidity ?? 0,
+        // Backend `windSpeed` is already km/h (Open-Meteo default unit).
+        windKph: b.forecast[0]?.windSpeed ?? 0,
       },
       daily: b.forecast.map((d) => ({
         date: d.date,
@@ -48,7 +50,7 @@ export async function getWeather(
         tempMax: d.tempMax,
         condition: d.description,
         rainfallMm: d.rainfall,
-        humidity: 0,
+        humidity: d.humidity ?? 0,
       })),
       alerts: [],
     }

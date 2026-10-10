@@ -6,6 +6,7 @@ can reach it during development.
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from routes.advisories import router as advisories_router
 from routes.climate import router as climate_router
 from routes.harvest import router as harvest_router
 from routes.irrigation import router as irrigation_router
@@ -38,6 +39,7 @@ app.include_router(pesticide_router, prefix="/api/pesticide", tags=["pesticide"]
 app.include_router(seeds_router, prefix="/api/seeds", tags=["seeds"])
 app.include_router(irrigation_router, prefix="/api/irrigation", tags=["irrigation"])
 app.include_router(harvest_router, prefix="/api/harvest", tags=["harvest"])
+app.include_router(advisories_router, prefix="/api/advisories", tags=["advisories"])
 
 
 if __name__ == "__main__":

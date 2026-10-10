@@ -64,7 +64,10 @@ def build_open_meteo_url(lat: float, lon: float) -> str:
     params = {
         "latitude": str(lat),
         "longitude": str(lon),
-        "daily": "weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum",
+        "daily": (
+            "weather_code,temperature_2m_max,temperature_2m_min,"
+            "precipitation_sum,relative_humidity_2m_max,wind_speed_10m_max"
+        ),
         "timezone": "auto",
         "forecast_days": str(FORECAST_DAYS),
     }
@@ -105,6 +108,9 @@ async def fetch_forecast(lat: float, lon: float) -> dict:
     temp_min = daily.get("temperature_2m_min") or []
     precip = daily.get("precipitation_sum") or []
     codes = daily.get("weather_code") or []
+    # Daily aggregates: daytime-peaking humidity and peak 10m wind speed.
+    humidity = daily.get("relative_humidity_2m_max") or []
+    wind_speed = daily.get("wind_speed_10m_max") or []
 
     forecast = [
         {
@@ -113,6 +119,8 @@ async def fetch_forecast(lat: float, lon: float) -> dict:
             "tempMin": temp_min[index] if index < len(temp_min) else None,
             "rainfall": precip[index] if index < len(precip) else 0,
             "description": describe_weather(codes[index] if index < len(codes) else None),
+            "humidity": humidity[index] if index < len(humidity) else None,
+            "windSpeed": wind_speed[index] if index < len(wind_speed) else None,
         }
         for index, date in enumerate(times)
     ]
